@@ -1,0 +1,10 @@
+{
+  "Name": "SharedFarmhouse",
+  "Author": "calebstein1",
+  "Version": "0.1.0-beta",
+  "Description": "Allows farmhands to move into the main farmhouse and out of their cabins",
+  "UniqueID": "calebstein1.SharedFarmhouse",
+  "EntryDll": "SharedFarmhouse.dll",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": [ "" ]
+}
