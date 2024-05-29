@@ -6,5 +6,5 @@
   "UniqueID": "calebstein1.SharedFarmhouse",
   "EntryDll": "SharedFarmhouse.dll",
   "MinimumApiVersion": "3.0.0",
-  "UpdateKeys": [ "" ]
+  "UpdateKeys": [ "GitHub:calebstein1/SharedFarmhouse" ]
 }
