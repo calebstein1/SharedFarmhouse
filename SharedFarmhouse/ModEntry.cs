@@ -11,7 +11,7 @@ internal sealed class ModEntry : Mod
         var harmony = new Harmony(ModManifest.UniqueID);
 
         harmony.Patch(
-            original: AccessTools.Method(typeof(FarmerTeam), "DeleteFarmhand"),
+            original: AccessTools.Method(typeof(FarmerTeam), nameof(FarmerTeam.DeleteFarmhand)),
             prefix: new HarmonyMethod(typeof(ModEntry), nameof(DeleteFarmhandPrefix))
         );
     }
