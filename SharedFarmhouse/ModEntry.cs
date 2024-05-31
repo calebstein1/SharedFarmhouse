@@ -21,7 +21,7 @@ internal sealed class ModEntry : Mod
 
         harmony.Patch(
             original: AccessTools.Method(typeof(GameServer), nameof(GameServer.IsFarmhandAvailable)),
-            postfix: new HarmonyMethod(typeof(ModEntry), nameof(IsFarmhandAvailablePostfix))
+            prefix: new HarmonyMethod(typeof(ModEntry), nameof(IsFarmhandAvailablePrefix))
         );
 
         harmony.Patch(
@@ -35,9 +35,10 @@ internal sealed class ModEntry : Mod
         return false;
     }
 
-    private static void IsFarmhandAvailablePostfix(ref bool __result)
+    private static bool IsFarmhandAvailablePrefix(ref bool __result)
     {
         __result = true;
+        return false;
     }
 
     private static IEnumerable<CodeInstruction> FixMailboxTranspiler(IEnumerable<CodeInstruction> instructions)
